@@ -1,7 +1,7 @@
 # Calculadora (Tkinter)
 
 Projeto base de uma calculadora desktop em Python usando Tkinter (biblioteca
-inclusa no Python). Esta versão evita dependências de GUI de terceiros.
+inclusa no Python).
 
 Requisitos
 - Python 3.8+
@@ -17,19 +17,12 @@ pip install -r requirements.txt
 python main.py
 ```
 
-Execução via Docker (observações sobre Windows)
-
-O `Dockerfile` instala `python3-tk` no container. No entanto, para exibir a
-GUI você precisa de um X server no host. No Windows, instale e execute o VcXsrv
-ou Xming e permita conexões. Use `host.docker.internal:0.0` como DISPLAY em
-geral.
-
 Um exemplo de build/run (Windows):
 
 ```powershell
 docker build -t calculadora:local .
 # Exemplo de execução (ajuste DISPLAY conforme seu X server):
-docker run -e DISPLAY=host.docker.internal:0.0 --rm calculadora:local
+docker run --rm -p 6080:6080 calculadora:local
 ```
 
 Notas
