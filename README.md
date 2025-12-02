@@ -25,6 +25,9 @@ docker build -t calculadora:local .
 docker run --rm -p 6080:6080 calculadora:local
 ```
 
+accesse
+http://localhost:6080/vnc_lite.html
+
 Notas
 - Tkinter já vem com o Python em Windows e facilita a execução local sem Docker.
 - O `Dockerfile` provido serve como base; para produção de GUI em contêineres
